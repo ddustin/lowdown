@@ -54,7 +54,7 @@
  * while the sandbox_post() happens afterward.
  */
 
-#if HAVE_PLEDGE
+#if 0
 
 static void
 sandbox_post(int fdin, int fddin, int fdout)
@@ -72,7 +72,7 @@ sandbox_pre(void)
 		err(1, "pledge");
 }
 
-#elif HAVE_SANDBOX_INIT
+#elif 0
 
 static void
 sandbox_post(int fdin, int fddin, int fdout)
@@ -94,7 +94,7 @@ sandbox_pre(void)
 	/* Do nothing. */
 }
 
-#elif HAVE_CAPSICUM
+#elif 0
 
 static void
 sandbox_post(int fdin, int fddin, int fdout)
